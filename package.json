@@ -1,0 +1,9 @@
+{
+  "name": "react-test",
+  "version": "1.0.0",
+  "description": "react and webpack test",
+  "main": "index.js",
+  "repository": "https://github.com/caias/webpack-react-test.git",
+  "author": "(caias <caias1018@gmail.com>)",
+  "license": "MIT"
+}
