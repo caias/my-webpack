@@ -1,0 +1,9 @@
+// z-index mapping
+@function z-index($name) {
+	@if map-has-key($z-indexes, $name) {
+		@return map-get($z-indexes, $name);
+	} @else {
+		@error "리스트에 해당하는 #{$name} 값이 없습니다. #{$z-indexes}에 있는 값들 중에 하나를 골라주세요.";
+		@return null;
+	}
+}

@@ -1,0 +1,42 @@
+@import './function/function.scss';
+@import './mixin.scss';
+
+// color picker 
+$palettes: (
+  white: (
+    1: #fff,
+    2: #f4f4f4,
+3: #eee,
+  ),
+  black: (
+    1: #000,
+    2: #333,
+    3: #666,
+  ),
+  red: (
+    1: #e55,
+    2: #aa070d,
+  ),
+);
+
+// 색상별 default value
+$white: color(white, 1);
+$black: color(black, 1);
+$red: color(red, 1);
+
+// header height
+$header-height: rem(46px);
+
+// z-index 매핑
+$z-indexes: (
+  auto        : auto,
+  zero        : 0,
+  one         : 1,
+  low         : 5,
+  mid         : 10,
+  high        : 15,
+  header      : 30,
+  dim         : 150,
+  modal       : 200,
+  max         : 9999,
+);
