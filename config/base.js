@@ -67,9 +67,10 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', 'jsx'],
+    extensions: ['.tsx', '.ts', '.js', 'jsx', '.scss'],
     alias: {
       'components': resolve(SRC_PATH, 'components'),
+      'scss': resolve(SRC_PATH, 'scss'),
     }
   },
   plugins: [

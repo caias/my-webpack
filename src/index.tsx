@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'components/App';
+import Dashboard from 'components/Wrapper';
+import './scss/global.scss';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Dashboard />, document.getElementById('app'));
