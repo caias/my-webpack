@@ -5,10 +5,12 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { resolve } = require('path');
 const isProduction = process.env.NODE_ENV === 'production';
 
+const ROOT = resolve(__dirname, '..');
+const SRC_PATH = resolve(ROOT, 'src');
+
 module.exports = {
   entry: {
-    index: resolve(__dirname, '..', 'src', 'index.js'),
-    global: resolve(__dirname, '..', 'src', 'scss', 'global.scss'),
+    index: resolve(__dirname, '..', 'src', 'index.tsx'),
   },
   output: {
     filename: '[name].js',
@@ -21,6 +23,15 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
           },
         ],
       },
@@ -54,6 +65,12 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', 'jsx'],
+    alias: {
+      'components': resolve(SRC_PATH, 'components'),
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
